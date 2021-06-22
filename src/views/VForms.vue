@@ -13,6 +13,53 @@
               <template v-slot:label>lable</template>
             </v-autocomplete>
           </div>
+
+          <div class="mt-16">
+            <v-file-input truncate-length="16" show-size></v-file-input>
+          </div>
+
+          <div class="mt-16">
+            <v-file-input truncate-length="16" chips></v-file-input>
+          </div>
+
+          <div class="mt-16">
+            <v-file-input truncate-length="16" color="green"></v-file-input>
+          </div>
+
+          <div class="mt-16">
+            <v-file-input truncate-length="16" color="green" :counter="10"></v-file-input>
+          </div>
+
+          <div class="mt-16">
+            <v-file-input
+              truncate-length="16"
+              color="green"
+              outlined
+              :counter="10"
+              counter-size-string
+            >
+              <template v-slot:label>name</template>
+            </v-file-input>
+          </div>
+
+          <div class="mt-16">
+            <v-form v-model="valid">
+              <v-container>
+                <v-row>
+                  <v-col cols="12" md="6">
+                    <v-text-field 
+                    label="Name" 
+                    v-model="task.name" 
+                    :rules="nameRules">
+                    </v-text-field>
+                  </v-col>
+                  <v-col cols="12" md="6">
+                    <v-text-field label="Email" v-model="task.email"></v-text-field>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-form>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -23,7 +70,15 @@
 export default {
   data() {
     return {
+      valid: false,
       autoCom: ["One", "Two", "Three", "Four"],
+      task:{
+        name:"",
+        email:""
+      },
+      nameRules:[
+        v => !!v || 'Name is required',
+      ]
     };
   },
 };

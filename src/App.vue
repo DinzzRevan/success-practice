@@ -39,6 +39,7 @@ export default {
             { label: 'VTabs', path: '/tabs' },
             { label: 'VTootip', path: '/tooltip' },
             { label: 'VForms', path: '/forms' },
+            { label: 'VList', path: '/list' },
   
 
         ]

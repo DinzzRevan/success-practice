@@ -13,6 +13,7 @@ import VTable from '../views/VTable.vue'
 import VTabs from '../views/VTabs.vue'
 import VTootip from '../views/VTooltip.vue'
 import VForms from '../views/VForms.vue'
+import VList from '../views/VList.vue'
 
 
 Vue.use(VueRouter)
@@ -27,11 +28,11 @@ const routes = [
     { path: '/chip', name: 'chip', component: VChip },
     { path: '/dialogs', name: 'dialogs', component: VDialogs },
     { path: '/expansion', name: 'expansion', component: VExpansion },
-    { path: '/dialogs', name: 'dialogs', component: VDialogs },
     { path: '/table', name: 'table', component: VTable },
     { path: '/tabs', name: 'tabs', component: VTabs },
     { path: '/tooltip', name: 'tooltip', component: VTootip },
     { path: '/forms', name: 'forms', component: VForms },
+    { path: '/list', name: 'list', component: VList },
 ]
 
 const router = new VueRouter({
